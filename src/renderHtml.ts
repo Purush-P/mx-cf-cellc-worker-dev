@@ -1,4 +1,4 @@
-export function renderHtml(content: string) {
+/*export function renderHtml(content: string) {
 	return `
     <!DOCTYPE html>
     <html lang="en">
@@ -26,4 +26,86 @@ export function renderHtml(content: string) {
       </body>
     </html>
 `;
+}*/
+
+export function renderHtml(content: string) {
+	return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Worker Page</title>
+      <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100vh;
+          color: #fff;
+          background: url('../assets/background.png') no-repeat center center fixed;
+          background-size: cover;
+        }
+
+        .container {
+          text-align: center;
+          padding: 20px;
+        }
+
+        .background {
+          display: none;
+        }
+
+        .footer {
+          padding: 15px;
+          font-size: 14px;
+          text-align: center;
+          color: #ccc;
+        }
+
+        .buttons {
+          display: flex;
+          justify-content: space-around;
+          padding: 20px;
+        }
+
+        .buttons img {
+          width: 40%;
+          cursor: pointer;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="header" style="text-align:center; padding:10px;">
+        <img src="../assets/header.png" alt="Header" style="max-width:100%; height:auto;" />
+      </div>
+      
+      <div class="container">
+        <img src="../assets/background.png" class="background" alt="Background" />
+      </div>
+
+      <div class="buttons">
+        <img src="../assets/noBtn.png" id="noBtn" alt="No Button" />
+        <img src="../assets/yesBtn.png" id="yesBtn" alt="Yes Button" />
+      </div>
+
+      <div class="footer">
+        <img src="../assets/footer.png" style="width:100%; max-width:600px;" alt="Footer" />
+      </div>
+
+      <script>
+        document.getElementById('noBtn').addEventListener('click', () => {
+          alert('You clicked NO');
+        });
+
+        document.getElementById('yesBtn').addEventListener('click', () => {
+          alert('You clicked YES');
+        });
+      </script>
+    </body>
+    </html>
+`;
 }
+
